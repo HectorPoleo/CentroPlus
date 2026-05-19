@@ -34,7 +34,6 @@ public class ActividadesRepository implements IActividadesRepository{
     public boolean update(Actividades actividad) {
         try (Connection connection = getConnection();
             PreparedStatement sentencia = connection.prepareStatement("UPDATE actividades SET nombre = ?, tipo_actividad = ?, duracion = ?, precio = ?, plazas_maximos = ?, plazas_ocupadas = ?")){
-            sentencia.setInt(1, actividad.getId());
             sentencia.setString(2, actividad.getNombre());
             sentencia.setString(3, actividad.getTipoActividad());
             sentencia.setInt(4, actividad.getDuracion());
