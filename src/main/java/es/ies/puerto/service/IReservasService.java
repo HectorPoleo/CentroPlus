@@ -10,7 +10,7 @@ public interface IReservasService {
      * Funcion para guardar una reserva dentro de la base de datos
      * @return true si se añade
      */
-    public boolean save();
+    public boolean save(Reservas reserva);
 
     /**
      * Funcion para actualizar una reserva en la base de datos en funcion del id

@@ -10,7 +10,7 @@ public interface IUsuarioService {
      * Funcion para guardar una usuario dentro de la base de datos
      * @return true si se añade
      */
-    public boolean save();
+    public boolean save(Usuario usuario);
 
     /**
      * Funcion para actualizar una usuario en la base de datos en funcion del id

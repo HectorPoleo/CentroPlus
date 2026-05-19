@@ -10,7 +10,7 @@ public interface IIncidenciasService {
      * Funcion para guardar una incidencia dentro de la base de datos
      * @return true si se añade
      */
-    public boolean save();
+    public boolean save(Incidencias incidencia);
 
     /**
      * Funcion para actualizar una incidencia en la base de datos en funcion del id

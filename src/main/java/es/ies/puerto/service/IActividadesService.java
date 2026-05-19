@@ -10,7 +10,7 @@ public interface IActividadesService {
      * Funcion para guardar una actividad dentro de la base de datos
      * @return true si se añade
      */
-    public boolean save();
+    public boolean save(Actividades actividad);
 
     /**
      * Funcion para actualizar una actividad en la base de datos en funcion del id
