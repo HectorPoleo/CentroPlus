@@ -1,42 +1,43 @@
 package es.ies.puerto.service.sqlite;
 import java.util.List;
 
+import es.ies.puerto.connection.SQLiteConnectionManager;
 import es.ies.puerto.modelo.Actividades;
+import es.ies.puerto.repository.IActividadesRepository;
+import es.ies.puerto.repository.sqlite.ActividadesRepository;
 import es.ies.puerto.service.IActividadesService;
-public class ActividadesService implements IActividadesService{
+
+public class ActividadesService extends SQLiteConnectionManager implements IActividadesService{
+
+    private final IActividadesRepository repository;
 
     public ActividadesService(){
-        super();
+        this.repository = new ActividadesRepository();                    
     }
 
     @Override
     public boolean save(Actividades actividad) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'save'");
+        return repository.save(actividad);
     }
 
     @Override
     public boolean update(Actividades actividade) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'update'");
+        return repository.update(actividade);
     }
 
     @Override
     public boolean delete(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+        return repository.delete(id);
     }
 
     @Override
     public List<Actividades> findAll() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
+        return repository.findAll();
     }
 
     @Override
     public Actividades findById(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'findById'");
+        return repository.findById(id);
     }
 
 }

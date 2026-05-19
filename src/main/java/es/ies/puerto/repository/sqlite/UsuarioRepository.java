@@ -6,10 +6,11 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import es.ies.puerto.connection.SQLiteConnectionManager;
 import es.ies.puerto.modelo.Usuario;
 import es.ies.puerto.repository.IUsuarioRepository;
 
-public class UsuarioRepository implements IUsuarioRepository{
+public class UsuarioRepository extends SQLiteConnectionManager implements IUsuarioRepository{
 
     @Override
     public boolean save(Usuario usuario) {

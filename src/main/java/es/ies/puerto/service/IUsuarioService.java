@@ -17,7 +17,7 @@ public interface IUsuarioService {
      * @param id id de la usuario a actualizar
      * @return true si usuario se actualizada
      */
-    public Usuario update(Usuario usuario);
+    public boolean update(Usuario usuario);
 
     /**
      * Funcion que borra una usuario de la base de datos

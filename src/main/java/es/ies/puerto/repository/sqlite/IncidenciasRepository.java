@@ -6,11 +6,12 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import es.ies.puerto.connection.SQLiteConnectionManager;
 import es.ies.puerto.modelo.Actividades;
 import es.ies.puerto.modelo.Incidencias;
 import es.ies.puerto.repository.IIncidenciasRepository;
 
-public class IncidenciasRepository implements IIncidenciasRepository{
+public class IncidenciasRepository extends SQLiteConnectionManager implements IIncidenciasRepository{
     
     public IncidenciasRepository(){
         super();

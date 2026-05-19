@@ -6,11 +6,12 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import es.ies.puerto.connection.SQLiteConnectionManager;
 import es.ies.puerto.modelo.Actividades;
 import es.ies.puerto.modelo.Usuario;
 import es.ies.puerto.repository.IActividadesRepository;
 
-public class ActividadesRepository implements IActividadesRepository{
+public class ActividadesRepository extends SQLiteConnectionManager implements IActividadesRepository{
 
     @Override
     public boolean save(Actividades actividad) {

@@ -6,11 +6,12 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import es.ies.puerto.connection.SQLiteConnectionManager;
 import es.ies.puerto.modelo.Incidencias;
 import es.ies.puerto.modelo.Reservas;
 import es.ies.puerto.repository.IReservasRepository;
 
-public class ReservasRepository implements IReservasRepository{
+public class ReservasRepository extends SQLiteConnectionManager implements IReservasRepository{
 
     @Override
     public boolean save(Reservas reserva) {

@@ -2,43 +2,43 @@ package es.ies.puerto.service.sqlite;
 
 import java.util.List;
 
+import es.ies.puerto.connection.SQLiteConnectionManager;
 import es.ies.puerto.modelo.Usuario;
+import es.ies.puerto.repository.IUsuarioRepository;
+import es.ies.puerto.repository.sqlite.UsuarioRepository;
 import es.ies.puerto.service.IUsuarioService;
 
-public class UsuarioService implements IUsuarioService{
+public class UsuarioService extends SQLiteConnectionManager implements IUsuarioService{
+
+    private final IUsuarioRepository repository;
 
     public UsuarioService(){
-        super();
+        this.repository = new UsuarioRepository();                    
     }
 
     @Override
     public boolean save(Usuario usuario) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'save'");
+        return repository.save(usuario);
     }
 
     @Override
-    public Usuario update(Usuario usuario) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'update'");
+    public boolean update(Usuario usuario) {
+        return repository.update(usuario);
     }
 
     @Override
     public boolean delete(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+        return repository.delete(id);
     }
 
     @Override
     public List<Usuario> findAll() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
+        return repository.findAll();
     }
 
     @Override
     public Usuario findById(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'findById'");
+        return repository.findById(id);
     }
 
 }
