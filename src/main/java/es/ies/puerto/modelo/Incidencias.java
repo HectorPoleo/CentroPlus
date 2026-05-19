@@ -14,7 +14,6 @@ public class Incidencias extends Reservas{
         super();
     }
 
-
     public Incidencias(int idIncidencia, int idUsuario, String asunto, String descripcion, String fecha, String estado) {
         super(idUsuario);
         this.idIncidencia = idIncidencia;
@@ -72,7 +71,6 @@ public class Incidencias extends Reservas{
         return result;
     }
 
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -86,7 +84,6 @@ public class Incidencias extends Reservas{
         Incidencias other = (Incidencias) obj;
         return idIncidencia == other.idIncidencia;
     }
-
 
     @Override
     public String toString() {
