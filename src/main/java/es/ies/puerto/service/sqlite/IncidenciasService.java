@@ -1,5 +1,5 @@
 package es.ies.puerto.service.sqlite;
 
-public interface IReservasService {
+public class IncidenciasService {
 
 }

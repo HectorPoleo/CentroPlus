@@ -1,4 +1,4 @@
-package es.ies.puerto.service.sqlite;
+package es.ies.puerto.service;
 
 public interface IIncidenciasService {
 

@@ -1,5 +1,5 @@
 package es.ies.puerto.service;
 
-public class IncidenciasService {
+public interface IUsuarioService {
 
 }

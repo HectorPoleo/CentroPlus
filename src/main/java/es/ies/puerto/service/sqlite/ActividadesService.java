@@ -1,4 +1,4 @@
-package es.ies.puerto.service;
+package es.ies.puerto.service.sqlite;
 
 public class ActividadesService {
 
