@@ -24,7 +24,7 @@ public interface IUsuarioService {
      * @param id id de la usuario
      * @return
      */
-    public Usuario delete(int id);
+    public boolean delete(int id);
 
     /**
      * Funcion para listar todas las usuario de la base de datos

@@ -24,7 +24,7 @@ public interface IReservasService {
      * @param id id de la reserva
      * @return
      */
-    public Reservas delete(int id);
+    public boolean delete(int id);
 
     /**
      * Funcion para listar todas las reserva de la base de datos

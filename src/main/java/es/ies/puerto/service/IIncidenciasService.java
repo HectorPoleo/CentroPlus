@@ -24,7 +24,7 @@ public interface IIncidenciasService {
      * @param id id de la incidencia
      * @return
      */
-    public Incidencias delete(int id);
+    public boolean delete(int id);
 
     /**
      * Funcion para listar todas las incidencia de la base de datos

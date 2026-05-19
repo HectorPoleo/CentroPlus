@@ -24,7 +24,7 @@ public interface IActividadesService {
      * @param id id de la actividad
      * @return
      */
-    public Actividades delete(int id);
+    public boolean delete(int id);
 
     /**
      * Funcion para listar todas las actividades de la base de datos
